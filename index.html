@@ -29,7 +29,12 @@
   <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-storage-compat.js"></script>
 
-  <script>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
     // Your web app's Firebase configuration
     const firebaseConfig = {
       apiKey: "AIzaSyAVw4wF-RVBeHhZGQbnhOcvxQmj5F79uCg",
@@ -39,6 +44,9 @@
       messagingSenderId: "265100873978",
       appId: "1:265100873978:web:848a29363a5dff87e0f943"
     };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
   </script>
 
   <script>
