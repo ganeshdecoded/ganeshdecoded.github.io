@@ -31,6 +31,25 @@
 
   <title>shop_app</title>
   <link rel="manifest" href="manifest.json">
+
+  <!-- Add Firebase Scripts -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore.js"></script>
+
+  <!-- Initialize Firebase -->
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyAVw4wF-RVBeHhZGQbnhOcvxQmj5F79uCg",
+      authDomain: "robesapp-c9dd4.firebaseapp.com",
+      projectId: "robesapp-c9dd4",
+      storageBucket: "robesapp-c9dd4.firebasestorage.app",
+      messagingSenderId: "265100873978",
+      appId: "1:265100873978:web:848a29363a5dff87e0f943"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
 </head>
 <body>
   <script src="flutter_bootstrap.js" async></script>
