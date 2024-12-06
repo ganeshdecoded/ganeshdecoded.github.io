@@ -17,37 +17,36 @@
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "1335816069";
+    const serviceWorkerVersion = "1015009553";
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
 </head>
 <body>
-  <!-- Firebase Scripts -->
-  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-storage.js"></script>
+  <!-- Add Firebase Scripts AFTER flutter.js but BEFORE initialization -->
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-storage-compat.js"></script>
 
   <script>
-    // Firebase configuration
+    // Your web app's Firebase configuration
     const firebaseConfig = {
       apiKey: "AIzaSyAVw4wF-RVBeHhZGQbnhOcvxQmj5F79uCg",
       authDomain: "robesapp-c9dd4.firebaseapp.com",
       projectId: "robesapp-c9dd4",
-      storageBucket: "robesapp-c9dd4.appspot.com",
+      storageBucket: "robesapp-c9dd4.firebasestorage.app",
       messagingSenderId: "265100873978",
       appId: "1:265100873978:web:848a29363a5dff87e0f943"
     };
-
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
   </script>
 
-  <!-- Flutter Entrypoint Loader -->
   <script>
     window.addEventListener('load', function(ev) {
-      // Ensure Firebase is initialized before Flutter
+      // Initialize Firebase before Flutter
+      firebase.initializeApp(firebaseConfig);
+      
+      // Download main.dart.js
       _flutter.loader.loadEntrypoint({
         serviceWorker: {
           serviceWorkerVersion: serviceWorkerVersion,
